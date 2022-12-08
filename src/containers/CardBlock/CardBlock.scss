@@ -1,1 +1,8 @@
 @use "../../assets/sass/abstracts/variables" as *;
+
+.cards-block {
+  height: 100vh;
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 50%));
+}

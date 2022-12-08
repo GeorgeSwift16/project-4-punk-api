@@ -1,5 +1,5 @@
 import FiltersItem from "../../components/FiltersItem/FiltersItem";
-
+import "./FiltersList.scss";
 const FiltersList = () => {
   return (
     <div className="filters">
