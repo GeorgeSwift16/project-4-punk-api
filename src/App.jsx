@@ -4,7 +4,7 @@ import beers from "./data/beers";
 console.log(beers);
 
 const App = () => {
-  return;
+  return <p>hello there</p>;
 };
 
 export default App;
