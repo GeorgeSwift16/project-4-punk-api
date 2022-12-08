@@ -1,5 +1,5 @@
 import Keg from "../../assets/images/keg.png";
-import "./Card.scss";
+import "./card.scss";
 const Card = () => {
   return (
     <>

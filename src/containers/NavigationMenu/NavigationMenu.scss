@@ -1,8 +1,9 @@
 @use "../../assets/sass/abstracts/variables" as *;
 .navigation-menu {
+  max-height: 90vh;
   grid-column: 1 / 2;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column;
   align-items: center;
   justify-content: space-evenly;
 }
