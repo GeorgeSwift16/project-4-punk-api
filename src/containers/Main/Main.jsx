@@ -1,3 +1,4 @@
+import "./Main.scss";
 import CardBlock from "../CardBlock/CardBlock";
 import NavigationMenu from "../NavigationMenu/NavigationMenu";
 
