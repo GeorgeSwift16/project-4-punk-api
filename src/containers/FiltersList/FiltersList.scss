@@ -1,0 +1,13 @@
+@use "../../assets/sass/abstracts/variables" as *;
+
+.filters {
+  display: flex;
+  text-align: center;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    list-style: none;
+  }
+}

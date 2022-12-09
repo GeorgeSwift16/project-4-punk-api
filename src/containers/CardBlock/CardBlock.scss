@@ -1,0 +1,9 @@
+@use "../../assets/sass/abstracts/variables" as *;
+
+.cards-block {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.2rem;
+  align-items: center;
+}

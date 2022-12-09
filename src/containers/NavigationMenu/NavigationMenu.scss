@@ -1,0 +1,8 @@
+@use "../../assets/sass/abstracts/variables" as *;
+.navigation-menu {
+  max-width: 25vw;
+  grid-column: 1 / 2;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+}
