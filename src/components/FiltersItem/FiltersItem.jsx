@@ -1,3 +1,4 @@
+import "./FiltersItem.scss";
 const FiltersItem = () => {
   return (
     <>
