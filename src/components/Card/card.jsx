@@ -14,12 +14,11 @@ const Card = () => {
         <figcaption className="card__text-content">
           <h5 className="card__heading">Buzz BEERS.NAME</h5>
           <h6 className="card__sub-heading">
-            A Real Bitter Experience."BEERS.DESCIRPTION"
-            <span className="card__ABV"> 4.5% ABV BEERS.ABV</span>
+            A Real Bitter Experience." DESC" 4.5% ABV
           </h6>
           <p className="card__description-text">
             A light, crisp and bitter IPA brewed with English and American hops.
-            A small batch brewed only once. BEERS.DESCIRPTION
+            A small batch brewed only once. DESC
           </p>
         </figcaption>
       </article>
@@ -34,12 +33,11 @@ const Card = () => {
         <figcaption className="card__text-content">
           <h5 className="card__heading">Buzz BEERS.NAME</h5>
           <h6 className="card__sub-heading">
-            A Real Bitter Experience."BEERS.DESCIRPTION"
-            <span className="card__ABV"> 4.5% ABV BEERS.ABV</span>
+            A Real Bitter Experience. DESC 4.5% ABV
           </h6>
           <p className="card__description-text">
             A light, crisp and bitter IPA brewed with English and American hops.
-            A small batch brewed only once. BEERS.DESCIRPTION
+            A small batch brewed only once. DESC
           </p>
         </figcaption>
       </article>
@@ -54,12 +52,11 @@ const Card = () => {
         <figcaption className="card__text-content">
           <h5 className="card__heading">Buzz BEERS.NAME</h5>
           <h6 className="card__sub-heading">
-            A Real Bitter Experience."BEERS.DESCIRPTION"
-            <span className="card__ABV"> 4.5% ABV BEERS.ABV</span>
+            A Real Bitter Experience." DESC" 4.5% ABV
           </h6>
           <p className="card__description-text">
             A light, crisp and bitter IPA brewed with English and American hops.
-            A small batch brewed only once. BEERS.DESCIRPTION
+            A small batch brewed only once. DESC
           </p>
         </figcaption>
       </article>
@@ -74,12 +71,11 @@ const Card = () => {
         <figcaption className="card__text-content">
           <h5 className="card__heading">Buzz BEERS.NAME</h5>
           <h6 className="card__sub-heading">
-            A Real Bitter Experience."BEERS.DESCIRPTION"
-            <span className="card__ABV"> 4.5% ABV BEERS.ABV</span>
+            A Real Bitter Experience." DESC" 4.5% ABV
           </h6>
           <p className="card__description-text">
             A light, crisp and bitter IPA brewed with English and American hops.
-            A small batch brewed only once. BEERS.DESCIRPTION
+            A small batch brewed only once. DESC
           </p>
         </figcaption>
       </article>
@@ -94,12 +90,11 @@ const Card = () => {
         <figcaption className="card__text-content">
           <h5 className="card__heading">Buzz BEERS.NAME</h5>
           <h6 className="card__sub-heading">
-            A Real Bitter Experience."BEERS.DESCIRPTION"
-            <span className="card__ABV"> 4.5% ABV BEERS.ABV</span>
+            A Real Bitter Experience." DESC" 4.5% ABV
           </h6>
           <p className="card__description-text">
             A light, crisp and bitter IPA brewed with English and American hops.
-            A small batch brewed only once. BEERS.DESCIRPTION
+            A small batch brewed only once. DESC
           </p>
         </figcaption>
       </article>
@@ -114,12 +109,11 @@ const Card = () => {
         <figcaption className="card__text-content">
           <h5 className="card__heading">Buzz BEERS.NAME</h5>
           <h6 className="card__sub-heading">
-            A Real Bitter Experience."BEERS.DESCIRPTION"
-            <span className="card__ABV"> 4.5% ABV BEERS.ABV</span>
+            A Real Bitter Experience." DESC" 4.5% ABV
           </h6>
           <p className="card__description-text">
             A light, crisp and bitter IPA brewed with English and American hops.
-            A small batch brewed only once. BEERS.DESCIRPTION
+            A small batch brewed only once. DESC
           </p>
         </figcaption>
       </article>

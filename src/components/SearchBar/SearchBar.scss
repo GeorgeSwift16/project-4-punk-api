@@ -1,12 +1,11 @@
 @use "../../assets/sass/abstracts/variables" as *;
 
 .search-bar {
-  height: 30%;
   width: 100%;
   padding: 0.1rem;
-  margin: auto;
   display: flex;
   flex-flow: column nowrap;
+  margin-bottom: 2rem;
   &__label {
     text-align: center;
     display: block;
