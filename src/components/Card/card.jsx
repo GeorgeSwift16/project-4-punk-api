@@ -1,6 +1,7 @@
 import Keg from "../../assets/images/keg.png";
 import "./card.scss";
-const Card = () => {
+const Card = ({ beersArray }) => {
+  console.log(beersArray);
   return (
     <>
       <article className="card">

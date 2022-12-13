@@ -1,9 +1,10 @@
 import Card from "../../components/Card/card";
 import "./CardBlock.scss";
-const CardBlock = () => {
+const CardBlock = ({ beersArray }) => {
+  console.log(beersArray);
   return (
     <section className="cards-block">
-      <Card />
+      <Card beersArray={beersArray} />
     </section>
   );
 };

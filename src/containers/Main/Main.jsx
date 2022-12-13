@@ -2,11 +2,12 @@ import "./Main.scss";
 import CardBlock from "../CardBlock/CardBlock";
 import NavigationMenu from "../NavigationMenu/NavigationMenu";
 
-const Main = () => {
+const Main = ({ beersArray }) => {
+  console.log(beersArray);
   return (
     <main className="main-content">
       <NavigationMenu />
-      <CardBlock />
+      <CardBlock beersArray={beersArray} />
     </main>
   );
 };

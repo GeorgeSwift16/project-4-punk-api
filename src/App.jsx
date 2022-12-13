@@ -2,10 +2,9 @@ import "./App.scss";
 import beers from "./data/beers";
 import Main from "./containers/Main/Main";
 
-console.log(beers);
-
 const App = () => {
-  return <Main />;
+  console.log(beers);
+  return <Main beersArray={beers} />;
 };
 
 export default App;
