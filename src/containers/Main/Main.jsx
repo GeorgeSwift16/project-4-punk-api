@@ -3,10 +3,12 @@ import CardBlock from "../CardBlock/CardBlock";
 import NavigationMenu from "../NavigationMenu/NavigationMenu";
 
 const Main = ({ beersArray }) => {
-  console.log(beersArray);
+  const getSearchInput = (event) => {
+    console.log(event.target.value);
+  };
   return (
     <main className="main-content">
-      <NavigationMenu />
+      <NavigationMenu searchInput={getSearchInput} />
       <CardBlock beersArray={beersArray} />
     </main>
   );
