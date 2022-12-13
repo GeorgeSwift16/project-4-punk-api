@@ -2,10 +2,10 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import FiltersList from "../FiltersList/FiltersList";
 import "./NavigationMenu.scss";
 
-const NavigationMenu = ({ searchinput }) => {
+const NavigationMenu = ({ searchInput }) => {
   return (
     <nav className="navigation-menu">
-      <SearchBar searchinput={searchinput} />
+      <SearchBar searchInput={searchInput} />
       <FiltersList />
     </nav>
   );

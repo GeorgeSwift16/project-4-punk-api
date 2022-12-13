@@ -8,7 +8,7 @@ const Main = ({ beersArray }) => {
   };
   return (
     <main className="main-content">
-      <NavigationMenu searchinput={getSearchInput} />
+      <NavigationMenu searchInput={getSearchInput} />
       <CardBlock beersArray={beersArray} />
     </main>
   );

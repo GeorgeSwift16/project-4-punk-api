@@ -18,5 +18,4 @@ const App = () => {
 
   return <Main beersArray={beers} />;
 };
-
 export default App;

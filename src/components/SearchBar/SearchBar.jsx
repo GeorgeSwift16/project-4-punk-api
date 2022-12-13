@@ -1,6 +1,6 @@
 import "./SearchBar.scss";
 
-const SearchBar = ({ searchinput }) => {
+const SearchBar = ({ searchInput }) => {
   return (
     <div className="search-bar">
       <label htmlFor="search-box" className="search-bar__label">
@@ -10,7 +10,7 @@ const SearchBar = ({ searchinput }) => {
         type="text"
         name="search-box"
         className="search-bar__input"
-        onChange={searchinput}
+        onChange={searchInput}
       />
     </div>
   );
