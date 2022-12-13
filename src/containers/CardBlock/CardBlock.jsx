@@ -1,11 +1,21 @@
 import Card from "../../components/Card/card";
 import "./CardBlock.scss";
 const CardBlock = ({ beersArray }) => {
-  console.log(beersArray);
-  return (
-    <section className="cards-block">
-      <Card beersArray={beersArray} />
-    </section>
-  );
+  const cardListJSX = beersArray.map((beer) => {
+    return (
+      <Card
+        key={beer.id}
+        id={beer.id}
+        image_url={beer.image_url}
+        name={beer.name}
+        tagline={beer.tagline}
+        abv={beer.abv}
+        first_brewed={beer.first_brewed}
+        ph={beer.ph}
+      />
+    );
+  });
+
+  return <section className="cards-block">{cardListJSX}</section>;
 };
 export default CardBlock;
