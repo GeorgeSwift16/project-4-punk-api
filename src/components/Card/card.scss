@@ -27,5 +27,12 @@
   }
   &__description-text {
     font-size: 0.6rem;
+    display: block;
+    overflow: hidden;
+    max-height: 3rem;
+    line-height: 1rem;
+  }
+  &__description-button {
+    font-size: 0.6rem;
   }
 }

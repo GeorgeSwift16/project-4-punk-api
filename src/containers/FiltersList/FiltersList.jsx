@@ -1,10 +1,10 @@
 import FiltersItem from "../../components/FiltersItem/FiltersItem";
 import "./FiltersList.scss";
-const FiltersList = () => {
+const FiltersList = ({ filtersInput }) => {
   return (
     <div className="filters">
       <ul className="filters__list">
-        <FiltersItem />
+        <FiltersItem filtersInput={filtersInput} />
       </ul>
     </div>
   );

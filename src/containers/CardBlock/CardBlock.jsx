@@ -12,6 +12,7 @@ const CardBlock = ({ beersArray }) => {
         abv={beer.abv}
         first_brewed={beer.first_brewed}
         ph={beer.ph}
+        description={beer.description}
       />
     );
   });

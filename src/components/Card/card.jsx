@@ -9,6 +9,10 @@ const Card = ({
   first_brewed,
   ph,
 }) => {
+  const cutDescriptionIndex = description.indexOf(" ", 20) + 1;
+  const shortenedDescription =
+    description.slice(0, cutDescriptionIndex) + "...";
+
   return (
     <>
       <article className="card">
