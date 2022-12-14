@@ -9,9 +9,10 @@ const Card = ({
   first_brewed,
   ph,
 }) => {
-  const cutDescriptionIndex = description.indexOf(" ", 20) + 1;
-  const shortenedDescription =
-    description.slice(0, cutDescriptionIndex) + "...";
+  // revisit if this or line height limit is better - maybe line height as will scale to bigger screens due to rem application?
+  // const cutDescriptionIndex = description.indexOf(" ", 20) + 1;
+  // const shortenedDescription =
+  //   description.slice(0, cutDescriptionIndex) + "...";
 
   return (
     <>
