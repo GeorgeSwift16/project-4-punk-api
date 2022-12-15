@@ -19,8 +19,6 @@ const Main = () => {
   };
 
   const getFiltersUpdate = (event) => {
-    console.log(event.target.value);
-
     if (event.target.value === "ABV") {
       setFilterABV(!filterABV);
     } else if (event.target.value === "Classics") {
@@ -30,10 +28,8 @@ const Main = () => {
     }
   };
 
-  // create a function that takes in page number then loops through the function for each page from 1-5 with page as a parameter and the filters applied , the output of each loop is a temporaroy array that is then pushed to a temporary complete result array the result array is then set as the state so it passes down to the cardblock.  - this must be reset -
   const getUrl = (search, filterABV, filterClassics, filterAcidic) => {
     let url = `https://api.punkapi.com/v2/beers?`;
-    // refactor 37-47 url func
     if (filterClassics) {
       url += `brewed_before=01-2010&`;
     }
@@ -63,7 +59,6 @@ const Main = () => {
       return;
     }
 
-    // filtering acidic beers, then deciding if we need to
     const acidicBeers = beersToDisplay
       .filter((element) => element.ph && element.ph <= 4)
       .slice();

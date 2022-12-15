@@ -7,6 +7,7 @@ const NavigationMenu = ({ searchInput, filtersInput }) => {
     <nav className="navigation-menu">
       <SearchBar searchInput={searchInput} />
       <FiltersList filtersInput={filtersInput} />
+      <h2 className="navigation-menu__header">Click A Beer!!</h2>
     </nav>
   );
 };
