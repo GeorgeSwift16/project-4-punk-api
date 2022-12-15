@@ -29,7 +29,7 @@ const Main = () => {
     }
   };
 
-  // const getFilterInput = (event) => {};
+  // create a function that takes in page number then loops through the function for each page from 1-5 with page as a parameter and the filters applied , the output of each loop is a temporaroy array that is then pushed to a temporary complete result array the result array is then set as the state so it passes down to the cardblock.  - this must be reset -
 
   const getBeers = async (search, filterABV, filterClassics, filterAcidic) => {
     let url = `https://api.punkapi.com/v2/beers?`;
