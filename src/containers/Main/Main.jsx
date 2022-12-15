@@ -9,6 +9,7 @@ const Main = () => {
   const [filterABV, setFilterABV] = useState(false);
   const [filterClassics, setFilterClassics] = useState(false);
   const [filterAcidic, setFilterAcidic] = useState(false);
+  // refactor to object
 
   const getSearchInput = (event) => {
     let initialUserSearchInput = event.target.value;
@@ -32,24 +33,46 @@ const Main = () => {
   // create a function that takes in page number then loops through the function for each page from 1-5 with page as a parameter and the filters applied , the output of each loop is a temporaroy array that is then pushed to a temporary complete result array the result array is then set as the state so it passes down to the cardblock.  - this must be reset -
 
   const getBeers = async (search, filterABV, filterClassics, filterAcidic) => {
+    const beersToDisplay = [];
     let url = `https://api.punkapi.com/v2/beers?`;
+    // refactor 37-47 url func
     if (filterClassics) {
       url += `brewed_before=01-2010&`;
     }
     if (filterABV) {
       url += `abv_gt=6&`;
     }
-    search ? (url += `beer_name=${search}&`) : (url += `page=1&per_page=80&`);
-    const response = await fetch(url);
-    const data = await response.json();
-    const acidicBeers = data
+    if (search) {
+      url += `beer_name=${search}&`;
+    }
+
+    // wait for first result
+    // wait for second result
+    // ... 5
+
+    // all fetchs happen at the same time
+
+    for (let pageNumber = 1; pageNumber < 6; pageNumber++) {
+      let pageResult = `&page=${pageNumber}&per_page=80&`;
+      const response = await fetch(url + pageResult);
+      const data = await response.json();
+      data.forEach((element) => {
+        beersToDisplay.push(element);
+      });
+    }
+
+    // guard clause that allows us to leave the function asap
+    if (!filterAcidic) {
+      setBeers(beersToDisplay);
+      return;
+    }
+
+    // filtering acidic beers, then deciding if we need to
+    const acidicBeers = beersToDisplay
       .filter((element) => element.ph && element.ph <= 4)
       .slice();
-    if (filterAcidic) {
-      setBeers(acidicBeers);
-    } else {
-      setBeers(data);
-    }
+
+    setBeers(acidicBeers);
   };
   useEffect(() => {
     getBeers(searchInput, filterABV, filterClassics, filterAcidic);
