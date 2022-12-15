@@ -31,9 +31,7 @@ const Main = () => {
   };
 
   // create a function that takes in page number then loops through the function for each page from 1-5 with page as a parameter and the filters applied , the output of each loop is a temporaroy array that is then pushed to a temporary complete result array the result array is then set as the state so it passes down to the cardblock.  - this must be reset -
-
-  const getBeers = async (search, filterABV, filterClassics, filterAcidic) => {
-    const beersToDisplay = [];
+  const getUrl = (search, filterABV, filterClassics, filterAcidic) => {
     let url = `https://api.punkapi.com/v2/beers?`;
     // refactor 37-47 url func
     if (filterClassics) {
@@ -45,12 +43,11 @@ const Main = () => {
     if (search) {
       url += `beer_name=${search}&`;
     }
+    getBeers(url, filterAcidic);
+  };
 
-    // wait for first result
-    // wait for second result
-    // ... 5
-
-    // all fetchs happen at the same time
+  const getBeers = async (url, filterAcidic) => {
+    const beersToDisplay = [];
 
     for (let pageNumber = 1; pageNumber < 6; pageNumber++) {
       let pageResult = `&page=${pageNumber}&per_page=80&`;
@@ -61,7 +58,6 @@ const Main = () => {
       });
     }
 
-    // guard clause that allows us to leave the function asap
     if (!filterAcidic) {
       setBeers(beersToDisplay);
       return;
@@ -75,7 +71,7 @@ const Main = () => {
     setBeers(acidicBeers);
   };
   useEffect(() => {
-    getBeers(searchInput, filterABV, filterClassics, filterAcidic);
+    getUrl(searchInput, filterABV, filterClassics, filterAcidic);
   }, [searchInput, filterABV, filterClassics, filterAcidic]);
 
   return (

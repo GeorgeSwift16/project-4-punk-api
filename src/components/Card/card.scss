@@ -19,20 +19,33 @@
     text-align: center;
     padding: 0.1rem;
     font-size: 0.7rem;
+    line-height: calc(0.7rem * 1.1);
+    min-height: calc(calc(0.7rem * 1.1) * 2.3);
   }
+
   &__sub-heading {
     text-align: center;
     padding: 0.1rem;
     font-size: 0.7rem;
+    line-height: calc(0.7rem * 1.1);
+    min-height: calc(calc(0.7rem * 1.1) * 2.3);
+
+    // display: block;
+    // overflow: hidden;
+    // min-height: 3rem;
   }
   &__description-text {
     font-size: 0.6rem;
-    display: block;
-    overflow: hidden;
-    max-height: 3rem;
-    line-height: 1rem;
+    line-height: calc(0.6rem * 1.1);
+    min-height: calc(calc(0.6rem * 1.1) * 3.2);
+    // display: block;
+    // overflow: hidden;
+    // min-height: 3rem;
   }
   &__description-button {
     font-size: 0.6rem;
   }
+}
+use && to add more info change .card-more-info {
+  background-color: rgba(59, 130, 246, 0.3);
 }
