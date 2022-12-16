@@ -18,17 +18,36 @@ const Card = ({
 
   const getMoreInfo = () => setshowMoreInfo(!showMoreInfo);
 
-  const shortenedTagline = tagline.slice(0, 30) + "...";
-  const shortenedName = name.slice(0, 30);
+  const getShortenedTagline = (tagline) => {
+    const isTaglineTooLong = tagline.length > 30;
+    const cutTaglineIndex = tagline.indexOf(" ", 20) + 1;
+    const shortenedTagLine = tagline.slice(0, cutTaglineIndex) + "...";
+    if (isTaglineTooLong) {
+      return shortenedTagLine;
+    } else {
+      return tagline;
+    }
+  };
+  const getShortenedName = (name) => {
+    const isnameTooLong = name.length > 30;
+    const cutNameIndex = name.indexOf(" ", 20) + 1;
+    const shortenedName = name.slice(0, cutNameIndex) + "...";
+    if (isnameTooLong) {
+      return shortenedName;
+    } else {
+      return name;
+    }
+  };
 
-  const cutDescriptionIndex = description.indexOf(" ", 50) + 1;
-  const shortenedDescription =
-    description.slice(0, cutDescriptionIndex) + "...";
   const checkImage = image_url ?? placeHolderImage;
   return (
     <>
       {showMoreInfo && (
-        <article role="button" className="card" onClick={getMoreInfo}>
+        <article
+          role="button"
+          className="card showmoreinfo"
+          onClick={getMoreInfo}
+        >
           <figcaption className="card__text-content">
             <h5 className="card__heading">{name}</h5>
             <h6 className="card__sub-heading">{tagline}</h6>
@@ -42,9 +61,11 @@ const Card = ({
             <img className="card__image" src={checkImage} alt="beers" />
           </figure>
           <figcaption className="card__text-content">
-            <h5 className="card__heading">{shortenedName}</h5>
-            <h6 className="card__sub-heading">{shortenedTagline}</h6>
-            <p className="card__description-text">{shortenedDescription}</p>
+            <h5 className="card__heading">{getShortenedName(name)}</h5>
+            <h6 className="card__sub-heading">
+              {getShortenedTagline(tagline)}
+            </h6>
+            <p className="card__description-text">Click to find out more!</p>
           </figcaption>
         </article>
       )}
