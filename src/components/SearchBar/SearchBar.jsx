@@ -11,6 +11,7 @@ const SearchBar = ({ searchInput }) => {
         name="search-box"
         className="search-bar__input"
         onChange={searchInput}
+        placeholder="search here!"
       />
     </div>
   );

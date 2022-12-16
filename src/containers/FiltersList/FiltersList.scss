@@ -9,5 +9,14 @@
     justify-content: space-evenly;
     width: 100%;
     list-style: none;
+    &-button {
+      font-size: 1rem;
+      font-weight: 700;
+      color: $tertiary-color;
+      background-color: $secondary-color;
+      border: 3px solid white;
+      border-radius: 10px;
+    }
   }
+  background-color: $secondary-color;
 }

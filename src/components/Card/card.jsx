@@ -19,7 +19,7 @@ const Card = ({
   const getMoreInfo = () => setshowMoreInfo(!showMoreInfo);
 
   const shortenedTagline = tagline.slice(0, 30) + "...";
-  const shortenedName = name.slice(0, 30) + "...";
+  const shortenedName = name.slice(0, 30);
 
   const cutDescriptionIndex = description.indexOf(" ", 50) + 1;
   const shortenedDescription =
@@ -28,7 +28,7 @@ const Card = ({
   return (
     <>
       {showMoreInfo && (
-        <article role="button" className="card-more-info" onClick={getMoreInfo}>
+        <article role="button" className="card" onClick={getMoreInfo}>
           <figcaption className="card__text-content">
             <h5 className="card__heading">{name}</h5>
             <h6 className="card__sub-heading">{tagline}</h6>
@@ -36,16 +36,18 @@ const Card = ({
           </figcaption>
         </article>
       )}
-      <article role="button" className="card" onClick={getMoreInfo}>
-        <figure className="card__image-container">
-          <img className="card__image" src={checkImage} alt="beers" />
-        </figure>
-        <figcaption className="card__text-content">
-          <h5 className="card__heading">{shortenedName}</h5>
-          <h6 className="card__sub-heading">{shortenedTagline}</h6>
-          <p className="card__description-text">{shortenedDescription}</p>
-        </figcaption>
-      </article>
+      {!showMoreInfo && (
+        <article role="button" className="card" onClick={getMoreInfo}>
+          <figure className="card__image-container">
+            <img className="card__image" src={checkImage} alt="beers" />
+          </figure>
+          <figcaption className="card__text-content">
+            <h5 className="card__heading">{shortenedName}</h5>
+            <h6 className="card__sub-heading">{shortenedTagline}</h6>
+            <p className="card__description-text">{shortenedDescription}</p>
+          </figcaption>
+        </article>
+      )}
     </>
   );
 };
