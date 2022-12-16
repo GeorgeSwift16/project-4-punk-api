@@ -1,6 +1,29 @@
 @use "../../assets/sass/abstracts/variables" as *;
 
 .filters__list-item {
-  display: block;
+  display: flex;
   align-content: center;
+  flex-grow: 1;
+}
+.filters__list-button {
+  max-height: 4rem;
+  flex-grow: 1;
+  font-size: 1rem;
+  font-weight: 700;
+  color: $tertiary-color;
+  background-color: $primary-color;
+  border: 3px solid yellow;
+  border-radius: 10px;
+  transition: all 1s ease;
+  &--active {
+    transition: all 1s ease;
+    max-height: 4rem;
+    flex-grow: 1;
+    font-size: 1rem;
+    font-weight: 700;
+    color: $primary-color;
+    background-color: $tertiary-color;
+    border: 3px solid $secondary-color;
+    border-radius: 10px;
+  }
 }

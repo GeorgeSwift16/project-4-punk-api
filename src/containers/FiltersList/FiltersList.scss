@@ -3,20 +3,12 @@
 .filters {
   display: flex;
   text-align: center;
+  height: 40vh;
   &__list {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     width: 100%;
     list-style: none;
-    &-button {
-      font-size: 1rem;
-      font-weight: 700;
-      color: $tertiary-color;
-      background-color: $secondary-color;
-      border: 3px solid white;
-      border-radius: 10px;
-    }
   }
-  background-color: $secondary-color;
 }

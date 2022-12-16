@@ -39,19 +39,36 @@ const Card = ({
     }
   };
 
+  const getShortenedDescription = (description) => {
+    const isDescriptionTooLong = description.length > 60;
+    const cutDescriptionIndex = description.indexOf(".", 50) + 1;
+    const shortenedDescription = description.slice(0, cutDescriptionIndex);
+    if (isDescriptionTooLong) {
+      return shortenedDescription + " ";
+    } else {
+      return description + " ";
+    }
+  };
+
   const checkImage = image_url ?? placeHolderImage;
   return (
     <>
       {showMoreInfo && (
         <article
           role="button"
-          className="card showmoreinfo"
+          className="card show-more-info"
           onClick={getMoreInfo}
         >
           <figcaption className="card__text-content">
             <h5 className="card__heading">{name}</h5>
-            <h6 className="card__sub-heading">{tagline}</h6>
-            <p className="card__description-text">{description}</p>
+            <h6 className="card__sub-heading">
+              {tagline}
+              {`  First brewed in : ` + first_brewed}
+            </h6>
+            <p className="card__description-text">
+              {getShortenedDescription(description)}
+              {abv + `% ABV`}
+            </p>
           </figcaption>
         </article>
       )}
