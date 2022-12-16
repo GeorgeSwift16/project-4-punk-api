@@ -76,7 +76,7 @@ const Main = () => {
         filtersInput={getFiltersUpdate}
         searchInput={getSearchInput}
       />
-      <CardBlock beersArray={beers} />
+      <CardBlock searchInput={searchInput} beersArray={beers} />
     </main>
   );
 };

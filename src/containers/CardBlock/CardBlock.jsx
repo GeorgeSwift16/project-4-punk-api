@@ -1,6 +1,6 @@
 import Card from "../../components/Card/card";
 import "./CardBlock.scss";
-const CardBlock = ({ beersArray }) => {
+const CardBlock = ({ beersArray, searchInput }) => {
   const cardListJSX = beersArray.map((beer) => {
     return (
       <Card
@@ -17,6 +17,17 @@ const CardBlock = ({ beersArray }) => {
     );
   });
 
-  return <section className="cards-block">{cardListJSX}</section>;
+  const noBeers = beersArray.length < 1;
+
+  return (
+    <section className="cards-block">
+      {noBeers && (
+        <>
+          <div>Sorry we cant find with a beer by the name of {searchInput}</div>
+        </>
+      )}
+      {cardListJSX}
+    </section>
+  );
 };
 export default CardBlock;
