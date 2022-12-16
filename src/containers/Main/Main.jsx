@@ -13,9 +13,7 @@ const Main = () => {
 
   const getSearchInput = (event) => {
     let initialUserSearchInput = event.target.value;
-    // to refactor back to usersearchinput = event.target.value if no way to make search strictly as typed.
-    const userSearchInput = initialUserSearchInput.replace(" ", "_");
-    setsearchInput(userSearchInput);
+    setsearchInput(initialUserSearchInput);
   };
 
   const getFiltersUpdate = (event) => {
@@ -72,10 +70,13 @@ const Main = () => {
   return (
     <main className="main-content">
       <NavigationMenu
+        filterABV={filterABV}
+        filterClassics={filterClassics}
+        filterAcidic={filterAcidic}
         filtersInput={getFiltersUpdate}
         searchInput={getSearchInput}
       />
-      <CardBlock beersArray={beers} />
+      <CardBlock searchInput={searchInput} beersArray={beers} />
     </main>
   );
 };

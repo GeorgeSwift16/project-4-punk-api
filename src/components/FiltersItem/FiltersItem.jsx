@@ -1,11 +1,24 @@
 import "./FiltersItem.scss";
-const FiltersItem = ({ filtersInput }) => {
+const FiltersItem = ({
+  filtersInput,
+  filterAcidic,
+  filterClassics,
+  filterABV,
+}) => {
+  const buttonStyling = (callerState) => {
+    if (callerState) {
+      return "filters__list-button--active";
+    } else {
+      return "filters__list-button";
+    }
+  };
+
   return (
     <>
       <li className="filters__list-item filters__list-item--1">
         <button
           onClick={filtersInput}
-          className="filters__list-button button button-ABV"
+          className={buttonStyling(filterABV)}
           value="ABV"
         >
           Filter ABV ({">"}=6%)
@@ -14,7 +27,7 @@ const FiltersItem = ({ filtersInput }) => {
       <li className="filters__list-item filters__list-item--2">
         <button
           onClick={filtersInput}
-          className="filters__list-button button button-classic"
+          className={buttonStyling(filterClassics)}
           value="Classics"
         >
           classic range
@@ -22,7 +35,7 @@ const FiltersItem = ({ filtersInput }) => {
       </li>
       <li className="filters__list-item filters__list-item--3">
         <button
-          className="filters__list-button button button-acidic"
+          className={buttonStyling(filterAcidic)}
           onClick={filtersInput}
           value="Acidic"
         >
