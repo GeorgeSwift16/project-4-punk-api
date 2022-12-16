@@ -23,7 +23,7 @@ const CardBlock = ({ beersArray, searchInput }) => {
     <section className="cards-block">
       {noBeers && (
         <>
-          <div>Sorry we cant find with a beer by the name of {searchInput}</div>
+          <div>Sorry we cant find with a beer by that name</div>
         </>
       )}
       {cardListJSX}
