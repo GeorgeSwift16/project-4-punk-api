@@ -25,7 +25,7 @@ const Main = () => {
       setFilterAcidic(!filterAcidic);
     }
   };
-
+  console.log("hello world")
   const getUrl = (search, filterABV, filterClassics, filterAcidic) => {
     let url = `https://api.punkapi.com/v2/beers?`;
     if (filterClassics) {
